@@ -10,5 +10,19 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
+    },
+    "web-cxc": {
+      "tags": []
+    },
+    "web-cxc-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web-cxc"]
+    }
+  }
 }
