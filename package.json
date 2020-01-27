@@ -31,7 +31,6 @@
   },
   "private": true,
   "dependencies": {
-    "@nrwl/angular": "^8.11.2",
     "@angular/animations": "^8.2.0",
     "@angular/common": "^8.2.0",
     "@angular/compiler": "^8.2.0",
@@ -40,13 +39,18 @@
     "@angular/platform-browser": "^8.2.0",
     "@angular/platform-browser-dynamic": "^8.2.0",
     "@angular/router": "^8.2.0",
-    "core-js": "^2.5.4",
-    "rxjs": "~6.4.0",
-    "zone.js": "^0.9.1",
-    "@papelx/scss": "file:libs/scss",
+    "@clr/angular": "^2.3.6",
     "@ngx-translate/core": "~11.0.0",
     "@ngx-translate/http-loader": "~4.0.0",
-    "reflect-metadata": "^0.1.12"
+    "@nrwl/angular": "^8.11.2",
+    "@papelx/scss": "file:libs/scss",
+    "core-js": "^2.5.4",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "~6.4.0",
+    "zone.js": "^0.9.1",
+    "@clr/ui": "2.3.6",
+    "@clr/icons": "2.3.6",
+    "@webcomponents/custom-elements": "^1.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.23",

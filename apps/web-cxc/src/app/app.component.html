@@ -1,20 +1,59 @@
-<div class="p-x-20">
-  <papelx-header title="web-cxc"></papelx-header>
+<clr-main-container>
+  <div class="alert alert-app-level">
+    Top level Alert panel
+  </div>
+  <clr-header class="header-6">
+    <div class="branding">
+      <a href="javascript://" class="nav-link">
+        <clr-icon shape="vm-bug"></clr-icon>
+        <span class="title">SIIPAPX CxC</span>
+      </a>
+    </div>
 
-  <h2>Nx</h2>
+    <div class="header-nav" [clr-nav-level]="1">
+      <a href="javascript://" class="active nav-link nav-text">Tableros</a>
+      <a href="javascript://" class="nav-link nav-text">Credito</a>
+      <a href="javascript://" class="nav-link nav-text">Contado</a>
+      <a href="javascript://" class="nav-link nav-text">Jurídico</a>
+      <a href="javascript://" class="nav-link nav-text">Cheques</a>
+    </div>
+    <div class="header-actions">
+      <clr-dropdown>
+        <button
+          class="nav-text"
+          clrDropdownTrigger
+          aria-label="open user profile"
+        >
+          <clr-icon shape="user"></clr-icon>
+          <span class="nav-text">Rubén Cancino</span>
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a href="..." clrDropdownItem>Preferences</a>
+          <a href="..." clrDropdownItem>Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </clr-header>
+  <div class="content-container">
+    <div class="content-area">
+      <h2>Content area</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quis
+        provident dolores eligendi animi odio quas quibusdam, repellendus
+        repellat impedit ex itaque nobis nemo dolorem quaerat blanditiis veniam
+        a quo.
+      </p>
+    </div>
+    <nav class="sidenav">
+      Side Nav
+    </nav>
+  </div>
+</clr-main-container>
+<div class="main-container">
+  <!-- <header class="header header-6">
 
-  An open source toolkit for enterprise Angular applications. Nx is designed to
-  help you create and build enterprise grade Angular applications. It provides
-  an opinionated approach to application project structure and patterns.
 
-  <h3>Quick Start & Documentation</h3>
 
-  <a href="https://nrwl.io/nx"
-    >Watch a 5-minute video on how to get started with Nx.</a
-  >
-
-  <h1>{{ 'welcome' | translate }}!</h1>
-  <h3>Try things out</h3>
-
-  <a href="https://nstudio.io/xplat">Learn more about xplat.</a>
+  </header> -->
 </div>

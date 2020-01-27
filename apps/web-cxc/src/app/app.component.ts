@@ -8,6 +8,7 @@ import { AppBaseComponent } from '@papelx/web';
   templateUrl: './app.component.html'
 })
 export class AppComponent extends AppBaseComponent {
+  showModal = false;
   constructor() {
     super();
   }
