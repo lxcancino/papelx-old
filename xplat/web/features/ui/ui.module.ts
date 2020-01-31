@@ -6,13 +6,15 @@ import { RouterModule } from '@angular/router';
 // libs
 import { UISharedModule } from '@papelx/features';
 import { UI_COMPONENTS } from './components';
+import { ClarityModule } from '@clr/angular';
 
 const MODULES = [
   CommonModule,
   RouterModule,
   FormsModule,
   ReactiveFormsModule,
-  UISharedModule
+  UISharedModule,
+  ClarityModule
 ];
 
 @NgModule({

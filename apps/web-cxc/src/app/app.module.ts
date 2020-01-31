@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // libs
 import { environment } from '@papelx/core';
@@ -6,13 +7,19 @@ import { environment } from '@papelx/core';
 // app
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './features/shared/shared.module';
+import { LayoutModule } from './layout/layout.module';
 
 import { AppComponent } from './app.component';
-import { ClarityModule } from '@clr/angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app.routing';
 
 @NgModule({
-  imports: [CoreModule, SharedModule, ClarityModule, BrowserAnimationsModule],
+  imports: [
+    CoreModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    LayoutModule,
+    AppRoutingModule
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })

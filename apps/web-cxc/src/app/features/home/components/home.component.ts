@@ -6,4 +6,8 @@ import { BaseComponent } from '@papelx/core';
   selector: 'papelx-home',
   templateUrl: 'home.component.html'
 })
-export class HomeComponent extends BaseComponent {}
+export class HomeComponent extends BaseComponent {
+  constructor() {
+    super();
+  }
+}

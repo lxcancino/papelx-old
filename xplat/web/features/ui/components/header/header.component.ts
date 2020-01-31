@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import { HeaderBaseComponent } from '@papelx/features';
+import { BaseComponent } from '@papelx/core';
 
 @Component({
   selector: 'papelx-header',
-  templateUrl: 'header.component.html'
+  templateUrl: 'header.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent extends HeaderBaseComponent {}
+export class HeaderComponent extends BaseComponent {
+  @Input() navigation: any[] = [];
+  constructor() {
+    super();
+  }
+}
