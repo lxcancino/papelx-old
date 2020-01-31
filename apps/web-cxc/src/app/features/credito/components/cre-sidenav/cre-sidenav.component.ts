@@ -2,12 +2,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { NavItem } from '@papelx/core';
 
 @Component({
-  selector: 'papelx-contado-page',
-  templateUrl: './contado-page.component.html',
+  selector: 'papelx-cre-sidenav',
+  templateUrl: './cre-sidenav.component.html',
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContadoPageComponent implements OnInit {
+export class CreSidenavComponent implements OnInit {
   navigation: NavItem[] = [
     {
       name: 'cartera',
@@ -29,6 +29,12 @@ export class ContadoPageComponent implements OnInit {
       path: 'cobros'
     },
     {
+      name: 'revision',
+      label: 'Revisión',
+      description: 'Control envio de revisiones y cobro',
+      path: 'revision'
+    },
+    {
       name: 'devoluciones',
       label: 'Devoluciones',
       description: 'Notas de crédito de devolución',
@@ -38,19 +44,19 @@ export class ContadoPageComponent implements OnInit {
       name: 'bonoficiaciones',
       label: 'Bonificaciones',
       description: 'Registro de notas de crédito por Bonificación y Descuento',
-      path: 'devoluciones'
-    },
-    {
-      name: 'bonificacionMejores',
-      label: 'Bonificación MC',
-      description: 'Administración de bonificaciones a mejores clientes',
-      path: 'bonificacionesCuota'
+      path: 'bonificaciones'
     },
     {
       name: 'cargos',
       label: 'Notas de Cargo',
       description: 'Administración de notas de cargo',
       path: 'cargos'
+    },
+    {
+      name: 'comisiones',
+      label: 'Comisiones',
+      description: 'Administración y calculo de comisiones a cobradores',
+      path: 'comisiones'
     },
     {
       name: 'reportes',
@@ -63,6 +69,32 @@ export class ContadoPageComponent implements OnInit {
           description: 'Cobranza de Crédito',
           path: 'reporte/cobranza'
         }
+      ]
+    },
+    {
+      name: 'catalogos',
+      label: 'Catálogos',
+      collapsible: true,
+      children: [
+        {
+          name: 'operadores',
+          label: 'Operadores',
+          path: 'operadores',
+          icon: 'users'
+        },
+        {
+          name: 'cobradores',
+          label: 'Cobradores',
+          path: 'cobradores',
+          icon: 'info-circle'
+        },
+        {
+          name: 'vendedores',
+          label: 'Vendedores',
+          path: 'vendedores',
+          icon: 'shopping-cart'
+        },
+        { name: 'abogados', label: 'Abogados', path: 'abogados', icon: 'book' }
       ]
     }
   ];

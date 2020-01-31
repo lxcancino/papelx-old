@@ -1,14 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { BaseComponent } from '@papelx/core';
-
-export interface NavItem {
-  name: string;
-  label: string;
-  description?: string;
-  path?: string;
-  children?: NavItem[];
-  collapsible?: false;
-}
+import { BaseComponent, NavItem } from '@papelx/core';
 
 @Component({
   selector: 'papelx-sidenav',
@@ -16,20 +7,8 @@ export interface NavItem {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidenavComponent extends BaseComponent {
-  @Input() navigation: NavItem[] = [
-    {
-      name: 'cartera',
-      label: 'Cartera',
-      description: 'Cartera de Crédito',
-      path: 'cartera'
-    },
-    {
-      name: 'facturas',
-      label: 'Facturas',
-      description: 'Facturas',
-      path: 'facturas'
-    }
-  ];
+  @Input() navigation: NavItem[] = [];
+  @Input() defaultIcon = 'info-standard';
   constructor() {
     super();
   }

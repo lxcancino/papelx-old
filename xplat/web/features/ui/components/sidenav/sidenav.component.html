@@ -1,8 +1,37 @@
 <section class="sidenav-content">
-  <ng-container *ngFor="let item of navigation">
-    <a href="..." class="nav-link" *ngIf="item.path; else group">
-      {{ item.label }}
-    </a>
+  <ng-container *ngFor="let item of navigation; let i = index">
+    <section class="nav-group collapsible" *ngIf="item.children; else navLink">
+      <input [attr.id]="item.name + i" type="checkbox" />
+      <label for="{{ item.name + i }}">{{ item.label }}</label>
+      <ul class="nav-list">
+        <li *ngFor="let row of item.children; let i = rowIdx">
+          <a
+            class="nav-link"
+            [routerLink]="[row.path]"
+            routerLinkActive="active"
+          >
+            <clr-icon
+              [attr.shape]="row.icon"
+              *ngIf="row.icon"
+              class="is-highlight is-solid"
+            ></clr-icon>
+            {{ row.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <ng-template #navLink>
+      <a
+        [routerLink]="[item.path]"
+        routerLinkActive="active"
+        class="nav-link"
+        *ngIf="item.path; else group"
+      >
+        <clr-icon [attr.shape]="item.icon" *ngIf="item.icon"></clr-icon>
+        <span>{{ item.label }}</span>
+      </a>
+    </ng-template>
   </ng-container>
 </section>
 

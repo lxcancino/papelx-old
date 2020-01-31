@@ -1,13 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { NavItem } from '@papelx/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
+import { BaseComponent, NavItem } from '@papelx/core';
 
 @Component({
-  selector: 'papelx-contado-page',
-  templateUrl: './contado-page.component.html',
-  styles: [],
+  selector: 'papelx-jur-page',
+  templateUrl: 'jur-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContadoPageComponent implements OnInit {
+export class JurPageComponent extends BaseComponent {
   navigation: NavItem[] = [
     {
       name: 'cartera',
@@ -17,10 +17,10 @@ export class ContadoPageComponent implements OnInit {
       path: 'cartera'
     },
     {
-      name: 'facturas',
-      label: 'Facturas',
-      description: 'Facturas',
-      path: 'facturas'
+      name: 'cheques',
+      label: 'Cheques',
+      description: 'Cheques',
+      path: 'cheques'
     },
     {
       name: 'cobros',
@@ -28,12 +28,7 @@ export class ContadoPageComponent implements OnInit {
       description: 'Registro y aplicación de cobros',
       path: 'cobros'
     },
-    {
-      name: 'devoluciones',
-      label: 'Devoluciones',
-      description: 'Notas de crédito de devolución',
-      path: 'devoluciones'
-    },
+
     {
       name: 'bonoficiaciones',
       label: 'Bonificaciones',
@@ -41,17 +36,12 @@ export class ContadoPageComponent implements OnInit {
       path: 'devoluciones'
     },
     {
-      name: 'bonificacionMejores',
-      label: 'Bonificación MC',
-      description: 'Administración de bonificaciones a mejores clientes',
-      path: 'bonificacionesCuota'
-    },
-    {
       name: 'cargos',
       label: 'Notas de Cargo',
       description: 'Administración de notas de cargo',
       path: 'cargos'
     },
+
     {
       name: 'reportes',
       label: 'Reportes',
@@ -60,14 +50,22 @@ export class ContadoPageComponent implements OnInit {
         {
           name: 'cobranza',
           label: 'Cobranza',
-          description: 'Cobranza de Crédito',
-          path: 'reporte/cobranza'
+          description: 'Cobranza de Jurídico',
+          path: 'reporte/cobranza/jur'
         }
+      ]
+    },
+    {
+      name: 'catalogos',
+      label: 'Catálogos',
+      collapsible: true,
+      children: [
+        { name: 'abogados', label: 'Abogados', path: 'abogados', icon: 'book' }
       ]
     }
   ];
 
-  constructor() {}
-
-  ngOnInit() {}
+  constructor() {
+    super();
+  }
 }
